@@ -1,27 +1,16 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import LogItem from "./LogItem";
 import Preloader from "../layout/Preloader";
+import { getLogs } from "../../actions/logActions";
 
-const Logs = () => {
-  const [logs, setLogs] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
-    // console.log("useEfect logs");
     getLogs();
   }, []);
 
-  const getLogs = async () => {
-    setLoading(true);
-    const res = await fetch("/logs");
-    // console.log("res", res);
-    const data = await res.json();
-    // console.log("data", data);
-    setLogs(data);
-    setLoading(false);
-  };
-
-  if (loading) {
+  if (loading || logs === null) {
     return <Preloader />;
   }
 
@@ -41,28 +30,12 @@ const Logs = () => {
   );
 };
 
-export default Logs;
+Logs.propTypes = {
+  log: PropTypes.object.isRequired,
+};
 
-//   console.log(logs);
-//   console.log("loading", loading);
+const mapStateToProp = (state) => ({
+  log: state.log,
+});
 
-//   const getLogs = () => {
-//     fetch(`/logs`, {
-//       method: "GET",
-//       headers: {
-//         Accept: "application/json",
-//       },
-//     })
-//       .then((response) => {
-//         console.log(response);
-//         return response.json();
-//       })
-//       .then((data) => {
-//         setLogs(data);
-//       })
-//       .catch((error) => {
-//         console.log("error", error);
-//       });
-//   };
-
-//   -------------
+export default connect(mapStateToProp, { getLogs })(Logs);

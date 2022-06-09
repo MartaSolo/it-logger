@@ -7,7 +7,7 @@ const Logs = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("useEfect logs");
+    // console.log("useEfect logs");
     getLogs();
   }, []);
 

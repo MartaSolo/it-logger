@@ -1,5 +1,8 @@
 import { useEffect, Fragment } from "react";
 
+import { Provider } from "react-redux";
+import store from "./store";
+
 import SearchBar from "./components/layout/SearchBar";
 import AddBtn from "./components/layout/AddBtn";
 import Logs from "./components/logs/Logs";
@@ -16,20 +19,22 @@ const App = () => {
   useEffect(() => {
     // initilize Materialize JS
     M.AutoInit();
-    console.log("useEfectAPP");
+    // console.log("useEfectAPP");
   }, []);
   return (
-    <Fragment>
-      <SearchBar />
-      <div className="container">
-        <AddBtn />
-        <AddLogModal />
-        <EditLogModal />
-        <AddTechModal />
-        <TechListModal />
-        <Logs />
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <SearchBar />
+        <div className="container">
+          <AddBtn />
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+          <TechListModal />
+          <Logs />
+        </div>
+      </Fragment>
+    </Provider>
   );
 };
 

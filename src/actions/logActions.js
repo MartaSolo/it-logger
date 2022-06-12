@@ -24,7 +24,7 @@ export const getLogs = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.statusText,
+      payload: error.response,
     });
   }
 };
@@ -48,7 +48,7 @@ export const addLog = (log) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.statusText,
+      payload: error.response,
     });
   }
 };
@@ -68,7 +68,7 @@ export const deleteLog = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.statusText,
+      payload: error.response,
     });
   }
 };
@@ -92,7 +92,7 @@ export const updateLog = (log) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.statusText,
+      payload: error.response,
     });
   }
 };
@@ -111,7 +111,7 @@ export const searchLogs = (text) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: error.response.statusText,
+      payload: error.response,
     });
   }
 };

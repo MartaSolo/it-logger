@@ -27,6 +27,41 @@
       "attention": true,
       "tech": "Sara Wilson",
       "date": "2022-06-10T16:29:06.216Z"
+    },
+    {
+      "message": "Add 4GB ram to 097 station",
+      "attention": true,
+      "tech": "Lisa Westfield",
+      "date": "2022-06-12T20:41:44.105Z",
+      "id": 5
+    },
+    {
+      "message": "Change the monitor setting 5674 station",
+      "attention": false,
+      "tech": "Leo Handler",
+      "date": "2022-06-12T20:42:52.946Z",
+      "id": 6
+    },
+    {
+      "message": "Set virtual machine for testing",
+      "attention": false,
+      "tech": "John Bravo",
+      "date": "2022-06-12T20:44:08.945Z",
+      "id": 7
+    },
+    {
+      "message": "Change IP address to 3965 station",
+      "attention": false,
+      "tech": "Leo Handler",
+      "date": "2022-06-12T20:45:03.510Z",
+      "id": 8
+    },
+    {
+      "message": "Install zoom for 851 station",
+      "attention": false,
+      "tech": "Sara Wilson",
+      "date": "2022-06-12T20:46:09.629Z",
+      "id": 9
     }
   ],
   "techs": [
@@ -44,11 +79,6 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
-    },
-    {
-      "firstName": "John",
-      "lastName": "Bravo",
-      "id": 6
     },
     {
       "firstName": "Lisa",

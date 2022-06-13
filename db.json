@@ -43,13 +43,6 @@
       "id": 6
     },
     {
-      "message": "Set virtual machine for testing",
-      "attention": false,
-      "tech": "John Bravo",
-      "date": "2022-06-12T20:44:08.945Z",
-      "id": 7
-    },
-    {
       "message": "Change IP address to 3965 station",
       "attention": false,
       "tech": "Leo Handler",
@@ -57,11 +50,11 @@
       "id": 8
     },
     {
+      "id": 9,
       "message": "Install zoom for 851 station",
-      "attention": false,
+      "attention": true,
       "tech": "Sara Wilson",
-      "date": "2022-06-12T20:46:09.629Z",
-      "id": 9
+      "date": "2022-06-13T09:45:34.104Z"
     }
   ],
   "techs": [
